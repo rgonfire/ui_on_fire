@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const path = require("path");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: [
@@ -10,7 +11,16 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    colors: {
+      ...colors,
+      primary: "#3E816D",
+      secondary: "#263D54",
+    },
+    fontFamily: {
+      sans: ["IBM Plex Sans", "sans-serif"],
+    },
     extend: {},
   },
+
   plugins: [],
 };

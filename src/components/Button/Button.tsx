@@ -1,9 +1,24 @@
 import React from "react";
+import classnames from "classnames";
+import { InterfaceButtonProps, RecordColors, RecordSizes } from "./Button.d";
 
-const Button = () => {
+const Button = ({
+  children,
+  color = "primary",
+  size = "regular",
+  classNames,
+}: InterfaceButtonProps): JSX.Element => {
   return (
-    <button type="button" className="border bg-red-500">
-      Basic Button
+    <button
+      type="button"
+      className={classnames(
+        "btn",
+        RecordColors[color],
+        RecordSizes[size],
+        classNames
+      )}
+    >
+      {children}
     </button>
   );
 };
