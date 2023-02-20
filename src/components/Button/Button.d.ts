@@ -5,8 +5,8 @@
 import { ReactNode, ButtonHTMLAttributes } from "react";
 
 // Const assertions
-const colors = ["primary", "secondary"] as const;
-const sizes = ["small", "regular"] as const;
+const colors = ["primary", "secondary", "tertiary"] as const;
+const sizes = ["small", "medium", "large"] as const;
 
 // Union types with string literals
 type TypeColors = typeof colors[number];
@@ -16,11 +16,13 @@ type TypeSizes = typeof sizes[number];
 export const RecordColors: Record<TypeColors, string> = {
   primary: "--primary",
   secondary: "--secondary",
+  tertiary: "--tertiary",
 };
 
 export const RecordSizes: Record<TypeSizes, string> = {
   small: "--small",
-  regular: "--regular",
+  medium: "--medium",
+  large: "--large",
 };
 
 export interface InterfaceButtonProps
@@ -34,11 +36,11 @@ export interface InterfaceButtonProps
    */
   color: TypeColors;
   /**
-   * Custom classname
-   */
-  classNames?: string;
-  /**
    * Button size
    */
   size: TypeSizes;
+  /**
+   * Custom classname
+   */
+  classNames?: string;
 }

@@ -4,20 +4,59 @@
 
 .btn {
   font-weight: 400;
-  border-radius: 0.75rem;
+  @apply px-9 py-1 flex flex-row justify-center items-center gap-x-1;
 }
+
+/* Button Sizes */
 
 .btn.--small {
-  @apply py-2 px-4;
+  @apply h-7;
 }
 
-.btn.--regular {
-  @apply p-4;
+.btn.--medium {
+  @apply h-8;
 }
+
+.btn.--large {
+  @apply h-9;
+}
+
+/* Button Variables */
 
 .btn.--primary {
-  @apply bg-primary text-white;
+  @apply bg-blue_g_500 text-white;
 }
+
 .btn.--secondary {
-  @apply bg-secondary text-white;
+  @apply border border-blue_g_500 text-blue_g_500;
+}
+
+.btn.--tertiary {
+  @apply underline text-blue_g_500;
+}
+
+/* Button States */
+
+.btn.--primary:hover {
+  @apply bg-blue_g_300;
+}
+
+.btn.--secondary:hover {
+  @apply border-blue_g_300 text-blue_g_300;
+}
+
+.btn.--tertiary:hover {
+  @apply text-blue_g_300;
+}
+
+.btn.--primary:active {
+  @apply bg-blue_g_400;
+}
+
+.btn.--secondary:active {
+  @apply border-blue_g_400 text-blue_g_400;
+}
+
+.btn.--tertiary:active {
+  @apply text-blue_g_400;
 }

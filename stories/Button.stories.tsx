@@ -1,3 +1,7 @@
+/**
+ * Configuration of buttons stories view (doc)
+ */
+
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Button from "../src/components/Button/Button";
@@ -11,15 +15,22 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
+export const Tertiary = Template.bind({});
 
 Primary.args = {
-  children: "Press Button",
+  children: "Button",
   color: "primary",
-  size: "small",
+  size: "medium",
 };
 
 Secondary.args = {
-  children: "Press Button",
+  children: "Button",
   color: "secondary",
-  size: "regular",
+  size: "medium",
+};
+
+Tertiary.args = {
+  children: "Ala",
+  color: "tertiary",
+  size: "medium",
 };

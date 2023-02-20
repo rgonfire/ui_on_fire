@@ -5,7 +5,7 @@ import { InterfaceButtonProps, RecordColors, RecordSizes } from "./Button.d";
 const Button = ({
   children,
   color = "primary",
-  size = "regular",
+  size = "medium",
   classNames,
 }: InterfaceButtonProps): JSX.Element => {
   return (
