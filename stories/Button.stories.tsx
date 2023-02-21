@@ -21,16 +21,22 @@ Primary.args = {
   children: "Button",
   color: "primary",
   size: "medium",
+  round: "a",
+  disabled: false,
 };
 
 Secondary.args = {
   children: "Button",
   color: "secondary",
   size: "medium",
+  round: "a",
+  disabled: false,
 };
 
 Tertiary.args = {
-  children: "Ala",
+  children: "Button",
   color: "tertiary",
   size: "medium",
+  round: "a",
+  disabled: false,
 };

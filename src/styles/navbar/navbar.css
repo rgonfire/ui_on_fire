@@ -1,0 +1,7 @@
+/**
+ * Navbar common styles
+ */
+
+.nav {
+  @apply bg-black;
+}

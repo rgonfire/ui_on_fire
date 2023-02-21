@@ -60,3 +60,23 @@
 .btn.--tertiary:active {
   @apply text-blue_g_400;
 }
+
+.btn.--primary:disabled,
+.btn.--secondary:disabled,
+.btn.--tertiary:disabled {
+  @apply opacity-80 pointer-events-none;
+}
+
+/* Button Border-Radius */
+
+.btn.--roundedA {
+  @apply rounded-full;
+}
+
+.btn.--roundedB {
+  @apply rounded-lg;
+}
+
+.btn.--roundedC {
+  @apply rounded-tl-xl rounded-br-xl;
+}
