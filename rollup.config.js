@@ -8,6 +8,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import url from "@rollup/plugin-url";
+import path from "path";
 import pkg from "./package.json";
 
 export default {
@@ -26,5 +27,11 @@ export default {
     commonjs(),
     url(),
     typescript({ useTsconfigDeclarationDir: true }),
+    postcss({
+      // CSS production
+      extract: path.resolve("dist/ui-onfire.css"),
+      minimize: true,
+      sourceMap: true,
+    }),
   ],
 };

@@ -54,11 +54,11 @@ export interface InterfaceButtonProps
   /**
    * Button disabled
    */
-  disabled: boolean;
+  disabled?: boolean;
   /**
    * Button type attribute
    */
-  type: "button" | "submit" | "reset";
+  type?: "button" | "submit" | "reset";
   /**
    * Optional click handler
    */

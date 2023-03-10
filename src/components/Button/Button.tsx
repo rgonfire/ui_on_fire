@@ -5,7 +5,7 @@ import {
   RecordColors,
   RecordSizes,
   RecordRounded,
-} from "./Button.d";
+} from "./Button.types";
 
 const Button = ({
   children,
