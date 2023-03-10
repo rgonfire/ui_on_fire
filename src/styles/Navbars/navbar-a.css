@@ -1,0 +1,7 @@
+/**
+ * Navbar common styles for Navbar A
+ */
+
+.nav-a {
+  @apply bg-primary text-white flex flex-row justify-between items-center px-10 py-2;
+}

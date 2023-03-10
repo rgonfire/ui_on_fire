@@ -56,6 +56,14 @@ export interface InterfaceButtonProps
    */
   disabled: boolean;
   /**
+   * Button type attribute
+   */
+  type: "button" | "submit" | "reset";
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void;
+  /**
    * Custom classname
    */
   classNames?: string;

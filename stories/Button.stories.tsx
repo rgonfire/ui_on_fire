@@ -23,6 +23,7 @@ Primary.args = {
   size: "medium",
   round: "a",
   disabled: false,
+  type: "button",
 };
 
 Secondary.args = {
@@ -31,6 +32,7 @@ Secondary.args = {
   size: "medium",
   round: "a",
   disabled: false,
+  type: "button",
 };
 
 Tertiary.args = {
@@ -39,4 +41,5 @@ Tertiary.args = {
   size: "medium",
   round: "a",
   disabled: false,
+  type: "button",
 };

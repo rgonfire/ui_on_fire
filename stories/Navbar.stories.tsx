@@ -4,17 +4,19 @@
 
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Navbar from "../src/components/Navbars/Navbar";
+import NavbarA from "../src/components/Navbars/NavbarA";
 
 export default {
   title: "Components/Navbars",
-  component: Navbar,
-} as ComponentMeta<typeof Navbar>;
+  component: NavbarA,
+} as ComponentMeta<typeof NavbarA>;
 
-const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
+const Template: ComponentStory<typeof NavbarA> = (args) => (
+  <NavbarA {...args} />
+);
 
-export const Primary = Template.bind({});
+export const A = Template.bind({});
 
-Primary.args = {
-  children: "Button",
+A.args = {
+  children: "Navbar",
 };

@@ -2,6 +2,4 @@
  * Navbar common styles
  */
 
-.nav {
-  @apply bg-black;
-}
+@import "./navbar-a";

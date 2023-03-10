@@ -9,6 +9,8 @@ import {
 
 const Button = ({
   children,
+  type = "button",
+  onClick,
   disabled = false,
   color = "primary",
   size = "medium",
@@ -17,7 +19,8 @@ const Button = ({
 }: InterfaceButtonProps): JSX.Element => {
   return (
     <button
-      type="button"
+      type={type}
+      onClick={onClick}
       disabled={disabled}
       className={classnames(
         "btn",
