@@ -1,10 +1,43 @@
-# Stack
+# ⚡️ Quickstart
 
-- Rollup
-- Typescript
-- React
-- Tailwindcss
+Open a terminal:
+``` 
+npm install @rgonfire/ui-on-fire
+```
+<br/>
 
-## ¿Cómo fue construido?
+Import stylesheet in your root app entry:
+``` 
+// app.tsx, app.jsx
+import "@rgonfire/ui-on-fire/dist/ui-onfire.css";
+```
+<br/>
 
-- React y React DOM como dependencias obligadas (peerDependencies)
+Import it:
+```
+// view.tsx, view.jsx
+import { Button } from "@rgonfire/ui-on-fire";
+
+export const View = () => {
+  return (
+    <Button variant="primary" size="default">
+      Click me
+    </Button>
+  );
+};
+```
+
+# 🌱 Third Party Dependencies
+
+This is a list of dependencies that are user for this module:
+
++ Storybook
++ Tailwindscss
++ Rollup
++ Typescript
++ classnames
++ React Router DOM
+
+## peerDependencies
++ React js.
++ React DOM.
