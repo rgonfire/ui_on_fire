@@ -5,7 +5,7 @@ import Logo from "../../assets/icons/svgs/logo.svg";
 
 const NavbarA = ({ classNames }: InterfaceNavbarAProps): JSX.Element => {
   return (
-    <nav className={classnames("nav-a", classNames)}>
+    <nav className={classnames("rg-nav-a", classNames)}>
       <div className="">
         <img src={Logo} />
       </div>

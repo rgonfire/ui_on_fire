@@ -2,49 +2,65 @@
  * Button common styles
  */
 
-.btn {
+.rg-btn {
   font-weight: 400;
-  @apply px-9 py-1 flex flex-row justify-center items-center gap-x-1 disabled:opacity-80 disabled:cursor-not-allowed;
+  @apply px-4 py-1 flex w-26 flex-row justify-center items-center gap-x-1 disabled:opacity-90 disabled:cursor-not-allowed;
+}
+
+.rg-btn span {
+  font-size: 1rem;
 }
 
 /* Button Sizes */
 
-.btn.--small {
+.rg-btn.--small {
+  @apply h-5;
+}
+
+.rg-btn.--medium {
   @apply h-7;
 }
 
-.btn.--medium {
+.rg-btn.--large {
   @apply h-8;
-}
-
-.btn.--large {
-  @apply h-9;
 }
 
 /* Button Variables */
 
-.btn.--primary {
+.rg-btn.--darkPrimary {
   @apply bg-blue_g_500 text-white hover:bg-blue_g_300 active:bg-blue_g_400;
 }
 
-.btn.--secondary {
+.rg-btn.--darkSecondary {
   @apply border border-blue_g_500 text-blue_g_500 hover:border-blue_g_300 hover:text-blue_g_300 active:border-blue_g_400 active:text-blue_g_400;
 }
 
-.btn.--tertiary {
+.rg-btn.--darkTertiary {
   @apply underline text-blue_g_500 hover:text-blue_g_300 active:text-blue_g_400;
+}
+
+.rg-btn.--lightPrimary {
+  @apply bg-white text-blue_g_500 hover:bg-white active:bg-white;
+}
+
+.rg-btn.--lightSecondary {
+  @apply border border-white text-white hover:border-white hover:text-white active:border-white active:text-white;
+}
+
+.rg-btn.--lightTertiary {
+  @apply underline text-white hover:text-white active:text-white;
 }
 
 /* Button Border-Radius */
 
-.btn.--roundedA {
+.rg-btn.--roundedSm {
   @apply rounded-full;
 }
 
-.btn.--roundedB {
+.rg-btn.--roundedM {
   @apply rounded-lg;
 }
 
-.btn.--roundedC {
+.rg-btn.--roundedLm {
   @apply rounded-tl-xl rounded-br-xl;
 }

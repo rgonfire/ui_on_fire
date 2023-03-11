@@ -18,28 +18,37 @@ export const Secondary = Template.bind({});
 export const Tertiary = Template.bind({});
 
 Primary.args = {
-  children: "Button",
-  color: "primary",
+  text: "Ver ahora",
+  theme: "lightPrimary",
   size: "medium",
-  round: "a",
+  round: "sm",
+  iconLeft: "",
+  iconRight: "",
+  alt: "",
   disabled: false,
   type: "button",
 };
 
 Secondary.args = {
-  children: "Button",
-  color: "secondary",
+  text: "Ver ahora",
+  theme: "lightPrimary",
   size: "medium",
-  round: "a",
+  round: "sm",
+  iconLeft: "",
+  iconRight: "",
+  alt: "",
   disabled: false,
   type: "button",
 };
 
 Tertiary.args = {
-  children: "Button",
-  color: "tertiary",
+  text: "Ver ahora",
+  theme: "lightPrimary",
   size: "medium",
-  round: "a",
+  round: "sm",
+  iconLeft: "",
+  iconRight: "",
+  alt: "",
   disabled: false,
   type: "button",
 };

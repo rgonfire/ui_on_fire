@@ -8,13 +8,16 @@ import {
 } from "./Button.types";
 
 const Button = ({
-  children,
   type = "button",
   onClick,
   disabled = false,
-  color = "primary",
+  theme = "darkPrimary",
   size = "medium",
-  round = "a",
+  round = "m",
+  alt = "",
+  text = "",
+  iconLeft,
+  iconRight,
   classNames,
 }: InterfaceButtonProps): JSX.Element => {
   return (
@@ -23,14 +26,16 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
       className={classnames(
-        "btn",
-        RecordColors[color],
+        "rg-btn",
+        RecordColors[theme],
         RecordSizes[size],
         RecordRounded[round],
         classNames
       )}
     >
-      {children}
+      {iconLeft && <img className="w-3" src={iconLeft} alt={alt} />}
+      <span className={`"bg-${theme}"`}>{text}</span>
+      {iconRight && <img className="w-3" src={iconRight} alt={alt} />}
     </button>
   );
 };
