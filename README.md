@@ -1,3 +1,8 @@
+# ⚡️ Quickstart
+
+Open a terminal:
+``` npm install @trejocode/uikit ```
+
 # 🌱 Third Party Dependencies
 
 This is a list of dependencies that are user for this module:
