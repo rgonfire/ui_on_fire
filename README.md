@@ -5,8 +5,9 @@ Open a terminal:
 npm install @rgonfire/ui-on-fire
 ```
 <br/>
-Add required font into index.html:
-``` html
+Add required font into index.
+
+```
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -16,14 +17,14 @@ Add required font into index.html:
 ```
 <br/>
 Import stylesheet in your root app entry:
-
-``` jsx
+``` 
 // app.tsx, app.jsx
 import "@trejocode/uikit/dist/trejocode-uikit.css";
 ```
 <br/>
+
 Import it:
-``` jsx
+```
 // view.tsx, view.jsx
 import { Button } from "@trejocode/uikit";
 
@@ -35,7 +36,7 @@ export const View = () => {
   );
 };
 ```
-<br/>
+
 # 🌱 Third Party Dependencies
 
 This is a list of dependencies that are user for this module:
