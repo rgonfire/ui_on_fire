@@ -16,7 +16,7 @@ import "@rgonfire/ui-on-fire/dist/ui-onfire.css";
 Import it:
 ```
 // view.tsx, view.jsx
-import { Button } from "@trejocode/uikit";
+import { Button } from "@rgonfire/ui-on-fire";
 
 export const View = () => {
   return (
