@@ -1,10 +1,19 @@
 # ⚡️ Quickstart
 
 Open a terminal:
+``` 
+npm install @rgonfire/ui-on-fire
 ```
-npm install @trejocode/uikit
 
-```
+Add required font into index.html:
+``` html
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+``` 
 
 # 🌱 Third Party Dependencies
 
