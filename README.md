@@ -1,10 +1,14 @@
-# Stack
+# 🌱 Third Party Dependencies
 
+This is a list of dependencies that are user for this module:
+
+- Storybook
+- Tailwindscss
 - Rollup
 - Typescript
-- React
-- Tailwindcss
+- classnames
+- React Router DOM
 
-## ¿Cómo fue construido?
-
-- React y React DOM como dependencias obligadas (peerDependencies)
+## peerDependencies
+- React js.
+- React DOM como dependencias obligadas.
