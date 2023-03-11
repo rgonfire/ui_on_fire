@@ -4,8 +4,7 @@ Open a terminal:
 ``` 
 npm install @rgonfire/ui-on-fire
 ```
-<br/>.
-
+<br/>
 Add required font into index.html:
 ``` html
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +13,7 @@ Add required font into index.html:
   href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
   rel="stylesheet"
 />
-``` 
+```
 <br/>
 Import stylesheet in your root app entry:
 
@@ -22,7 +21,7 @@ Import stylesheet in your root app entry:
 // app.tsx, app.jsx
 import "@trejocode/uikit/dist/trejocode-uikit.css";
 ```
-
+<br/>
 Import it:
 ``` jsx
 // view.tsx, view.jsx
@@ -36,19 +35,18 @@ export const View = () => {
   );
 };
 ```
-
-
+<br/>
 # 🌱 Third Party Dependencies
 
 This is a list of dependencies that are user for this module:
 
-- Storybook
-- Tailwindscss
-- Rollup
-- Typescript
-- classnames
-- React Router DOM
++ Storybook
++ Tailwindscss
++ Rollup
++ Typescript
++ classnames
++ React Router DOM
 
 ## peerDependencies
-- React js.
-- React DOM como dependencias obligadas.
++ React js.
++ React DOM.
