@@ -4,7 +4,7 @@ Open a terminal:
 ``` 
 npm install @rgonfire/ui-on-fire
 ```
-
+<br/>.
 
 Add required font into index.html:
 ``` html
@@ -15,7 +15,7 @@ Add required font into index.html:
   rel="stylesheet"
 />
 ``` 
-
+<br/>
 Import stylesheet in your root app entry:
 
 ``` jsx
