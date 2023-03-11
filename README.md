@@ -1,7 +1,10 @@
 # ⚡️ Quickstart
 
 Open a terminal:
-``` npm install @trejocode/uikit ```
+```
+npm install @trejocode/uikit
+
+```
 
 # 🌱 Third Party Dependencies
 
