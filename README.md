@@ -9,7 +9,7 @@ npm install @rgonfire/ui-on-fire
 Import stylesheet in your root app entry:
 ``` 
 // app.tsx, app.jsx
-import "@trejocode/uikit/dist/trejocode-uikit.css";
+import "@rgonfire/ui-on-fire/dist/ui-onfire.css";
 ```
 <br/>
 
