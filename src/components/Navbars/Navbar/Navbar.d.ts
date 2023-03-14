@@ -2,9 +2,7 @@
  * @description Type definitions NavbarA
  */
 
-import { ReactNode } from "react";
-
-export interface InterfaceNavbarAProps {
+export interface InterfaceNavbarProps {
   /**
    * Custom classname
    */

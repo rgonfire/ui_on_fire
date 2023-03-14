@@ -1,22 +1,27 @@
 # ⚡️ Quickstart
 
 Open a terminal:
-``` 
-npm install @rgonfire/ui-on-fire
+
 ```
+npm install ui-on-fire
+```
+
 <br/>
 
 Import stylesheet in your root app entry:
-``` 
-// app.tsx, app.jsx
-import "@rgonfire/ui-on-fire/dist/ui-onfire.css";
+
 ```
+// app.tsx, app.jsx
+import "ui-on-fire/dist/ui-onfire.css";
+```
+
 <br/>
 
 Import it:
+
 ```
 // view.tsx, view.jsx
-import { Button } from "@rgonfire/ui-on-fire";
+import { Button } from "ui-on-fire";
 
 export const View = () => {
   return (
@@ -31,13 +36,14 @@ export const View = () => {
 
 This is a list of dependencies that are user for this module:
 
-+ Storybook
-+ Tailwindscss
-+ Rollup
-+ Typescript
-+ classnames
-+ React Router DOM
+- Storybook
+- Tailwindscss
+- Rollup
+- Typescript
+- classnames
+- React Router DOM
 
 ## peerDependencies
-+ React js.
-+ React DOM.
+
+- React js.
+- React DOM.

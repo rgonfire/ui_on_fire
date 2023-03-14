@@ -1,6 +1,6 @@
 {
   "name": "ui-on-fire",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "UI library for react front end lovers",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -18,6 +18,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rgonfire/ui_on_fire.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [],
   "author": "",

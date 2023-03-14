@@ -13,12 +13,14 @@ const themes = [
   "lightSecondary",
   "lightTertiary",
 ] as const;
-const sizes = ["small", "medium", "large"] as const;
+const widthSizes = ["small", "medium", "large"] as const;
+const heightSizes = ["small", "medium", "large"] as const;
 const rounded = ["sm", "m", "lm"] as const;
 
 // Union types with string literals
 type TypeThemes = typeof themes[number];
-type TypeSizes = typeof sizes[number];
+type TypeWidthSizes = typeof widthSizes[number];
+type TypeHeightSizes = typeof heightSizes[number];
 type TypeRounded = typeof rounded[number];
 
 // Match de clases
@@ -31,10 +33,16 @@ export const RecordColors: Record<TypeThemes, string> = {
   lightTertiary: "--lightTertiary",
 };
 
-export const RecordSizes: Record<TypeSizes, string> = {
-  small: "--small",
-  medium: "--medium",
-  large: "--large",
+export const RecordHeightSizes: Record<TypeHeightSizes, string> = {
+  small: "--h-small",
+  medium: "--h-medium",
+  large: "--h-large",
+};
+
+export const RecordWidthSizes: Record<TypeWidthSizes, string> = {
+  small: "--w-small",
+  medium: "--w-medium",
+  large: "--w-large",
 };
 
 export const RecordRounded: Record<TypeRounded, string> = {
@@ -43,24 +51,40 @@ export const RecordRounded: Record<TypeRounded, string> = {
   lm: "--roundedLm",
 };
 
-export interface InterfaceButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
-  /**
-   * Inside button text
-   */
-  text: string;
+export interface InterfaceButtonCommonProps {
   /**
    * Button theme
    */
   theme: TypeThemes;
   /**
-   * Button size
+   * Button width size
    */
-  size: TypeSizes;
+  width: TypeWidthSizes;
+  /**
+   * Button height size
+   */
+  height: TypeHeightSizes;
+  /**
+   * Inside button text
+   */
+  text: string;
   /**
    * Button border-radius style
    */
   round?: TypeRounded;
+  /**
+   * Alt for icon of the button
+   */
+  alt?: string;
+  /**
+   * Custom classname
+   */
+  classNames?: string;
+}
+
+export interface InterfaceButtonProps
+  extends InterfaceButtonCommonProps,
+    ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Src of the icon left of the button
    */
@@ -69,10 +93,7 @@ export interface InterfaceButtonProps
    * Src of the icon right of the button
    */
   iconRight?: string;
-  /**
-   * Alt for icon of the button
-   */
-  alt?: string;
+
   /**
    * Button disabled
    */
@@ -85,8 +106,4 @@ export interface InterfaceButtonProps
    * Optional click handler
    */
   onClick?: () => void;
-  /**
-   * Custom classname
-   */
-  classNames?: string;
 }

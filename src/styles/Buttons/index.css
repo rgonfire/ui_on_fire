@@ -4,28 +4,43 @@
 
 .rg-btn {
   font-weight: 400;
-  @apply px-4 py-1 flex w-26 flex-row justify-center items-center gap-x-1 disabled:opacity-90 disabled:cursor-not-allowed;
+  @apply py-1 flex flex-row justify-center items-center gap-x-1 disabled:opacity-90 disabled:cursor-not-allowed;
 }
 
 .rg-btn span {
   font-size: 1rem;
 }
 
-/* Button Sizes */
+.rg-btn img {
+  @apply w-3;
+}
 
-.rg-btn.--small {
+/* Button Sizes */
+.rg-btn.--w-small {
+  @apply px-3 w-1;
+}
+
+.rg-btn.--w-medium {
+  @apply px-4 w-26;
+}
+
+.rg-btn.--w-large {
+  @apply px-4 w-40;
+}
+
+.rg-btn.--h-small {
   @apply h-5;
 }
 
-.rg-btn.--medium {
+.rg-btn.--h-medium {
   @apply h-7;
 }
 
-.rg-btn.--large {
+.rg-btn.--h-large {
   @apply h-8;
 }
 
-/* Button Variables */
+/* Button Themes */
 
 .rg-btn.--darkPrimary {
   @apply bg-blue_g_500 text-white hover:bg-blue_g_300 active:bg-blue_g_400;

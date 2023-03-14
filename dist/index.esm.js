@@ -1,5 +1,32 @@
 import React from 'react';
 
+/******************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
 var classnamesExports = {};
 var classnames$1 = {
   get exports(){ return classnamesExports; },
@@ -69,25 +96,105 @@ var classnames = classnamesExports;
  * @description Type definitions Button
  */
 // Match de clases
-const RecordColors = {
-    primary: "--primary",
-    secondary: "--secondary",
-    tertiary: "--tertiary",
+const RecordColors$2 = {
+    darkPrimary: "--darkPrimary",
+    darkSecondary: "--darkSecondary",
+    darkTertiary: "--darkTertiary",
+    lightPrimary: "--lightPrimary",
+    lightSecondary: "--lightSecondary",
+    lightTertiary: "--lightTertiary",
 };
-const RecordSizes = {
-    small: "--small",
-    medium: "--medium",
-    large: "--large",
+const RecordHeightSizes$2 = {
+    small: "--h-small",
+    medium: "--h-medium",
+    large: "--h-large",
+};
+const RecordWidthSizes$2 = {
+    small: "--w-small",
+    medium: "--w-medium",
+    large: "--w-large",
+};
+const RecordRounded$2 = {
+    sm: "--roundedSm",
+    m: "--roundedM",
+    lm: "--roundedLm",
+};
+
+const Button = (_a) => {
+    var { type = "button", onClick, disabled = false, theme = "darkPrimary", height = "medium", width = "medium", round = "m", alt = "", text = "", iconLeft, iconRight, classNames } = _a, rest = __rest(_a, ["type", "onClick", "disabled", "theme", "height", "width", "round", "alt", "text", "iconLeft", "iconRight", "classNames"]);
+    return (React.createElement("button", Object.assign({ type: type, onClick: onClick, disabled: disabled, className: classnames("rg-btn", RecordColors$2[theme], RecordHeightSizes$2[height], RecordWidthSizes$2[width], RecordRounded$2[round], classNames) }, rest),
+        iconLeft && React.createElement("img", { className: "w-3", src: iconLeft, alt: alt }),
+        React.createElement("span", { className: `"bg-${theme}"` }, text),
+        iconRight && React.createElement("img", { className: "w-3", src: iconRight, alt: alt })));
+};
+
+/**
+ * @description Type definitions ButtonLink
+ */
+// Match de clases
+const RecordColors$1 = {
+    darkPrimary: "--darkPrimary",
+    darkSecondary: "--darkSecondary",
+    darkTertiary: "--darkTertiary",
+    lightPrimary: "--lightPrimary",
+    lightSecondary: "--lightSecondary",
+    lightTertiary: "--lightTertiary",
+};
+const RecordHeightSizes$1 = {
+    small: "--h-small",
+    medium: "--h-medium",
+    large: "--h-large",
+};
+const RecordWidthSizes$1 = {
+    small: "--w-small",
+    medium: "--w-medium",
+    large: "--w-large",
+};
+const RecordRounded$1 = {
+    sm: "--roundedSm",
+    m: "--roundedM",
+    lm: "--roundedLm",
+};
+
+const ButtonLink$1 = (_a) => {
+    var { theme = "darkPrimary", height = "medium", width = "medium", round = "m", alt = "", text = "", iconLeft, iconRight, classNames, link = "" } = _a, rest = __rest(_a, ["theme", "height", "width", "round", "alt", "text", "iconLeft", "iconRight", "classNames", "link"]);
+    return (React.createElement("a", Object.assign({ href: link, className: classnames("rg-btn", RecordColors$1[theme], RecordHeightSizes$1[height], RecordWidthSizes$1[width], RecordRounded$1[round], classNames) }, rest),
+        iconLeft && React.createElement("img", { className: "w-3", src: iconLeft, alt: alt }),
+        React.createElement("span", { className: `"bg-${theme}"` }, text),
+        iconRight && React.createElement("img", { className: "w-3", src: iconRight, alt: alt })));
+};
+
+/**
+ * @description Type definitions ButtonLink
+ */
+// Match de clases
+const RecordColors = {
+    darkPrimary: "--darkPrimary",
+    darkSecondary: "--darkSecondary",
+    darkTertiary: "--darkTertiary",
+    lightPrimary: "--lightPrimary",
+    lightSecondary: "--lightSecondary",
+    lightTertiary: "--lightTertiary",
+};
+const RecordHeightSizes = {
+    small: "--h-small",
+    medium: "--h-medium",
+    large: "--h-large",
+};
+const RecordWidthSizes = {
+    small: "--w-small",
+    medium: "--w-medium",
+    large: "--w-large",
 };
 const RecordRounded = {
-    a: "--roundedA",
-    b: "--roundedB",
-    c: "--roundedC",
+    sm: "--roundedSm",
+    m: "--roundedM",
+    lm: "--roundedLm",
 };
 
-const Button = ({ children, type = "button", onClick, disabled = false, color = "primary", size = "medium", round = "a", classNames, }) => {
-    return (React.createElement("button", { type: type, onClick: onClick, disabled: disabled, className: classnames("btn", RecordColors[color], RecordSizes[size], RecordRounded[round], classNames) }, children));
+const ButtonLink = ({ onClick, theme = "darkPrimary", height = "medium", width = "medium", round = "sm", alt = "", iconSrc = "https://rgonfire.com/assets/icons/svgs/star.svg", classNames, }) => {
+    return (React.createElement("img", { src: iconSrc, alt: alt, onClick: onClick, className: classnames("rg-btn", RecordColors[theme], RecordHeightSizes[height], RecordWidthSizes[width], RecordRounded[round], classNames) }));
 };
 
-export { Button };
+export { Button, ButtonLink as ButtonIcon, ButtonLink$1 as ButtonLink };
 //# sourceMappingURL=index.esm.js.map

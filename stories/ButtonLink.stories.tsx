@@ -1,17 +1,19 @@
 /**
- * Configuration of buttons stories view (doc)
+ * Configuration of button link stories view (doc)
  */
 
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "../src/components/Buttons/Button";
+import ButtonLink from "../src/components/Buttons/ButtonLink";
 
 export default {
-  title: "Components/Buttons/Button",
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: "Components/Buttons/ButtonLink",
+  component: ButtonLink,
+} as ComponentMeta<typeof ButtonLink>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof ButtonLink> = (args) => (
+  <ButtonLink {...args} />
+);
 
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
@@ -26,8 +28,7 @@ Primary.args = {
   iconLeft: "",
   iconRight: "",
   alt: "",
-  disabled: false,
-  type: "button",
+  link: "http://google.com",
 };
 
 Secondary.args = {
@@ -39,8 +40,7 @@ Secondary.args = {
   iconLeft: "",
   iconRight: "",
   alt: "",
-  disabled: false,
-  type: "button",
+  link: "http://google.com",
 };
 
 Tertiary.args = {
@@ -52,6 +52,5 @@ Tertiary.args = {
   iconLeft: "",
   iconRight: "",
   alt: "",
-  disabled: false,
-  type: "button",
+  link: "http://google.com",
 };

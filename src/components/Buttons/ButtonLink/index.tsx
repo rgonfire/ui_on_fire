@@ -1,43 +1,45 @@
 import React from "react";
 import classnames from "classnames";
-import {
-  InterfaceButtonProps,
-  RecordColors,
-  RecordSizes,
-  RecordRounded,
-} from "./Button.types";
+import { InterfaceButtonLinkProps } from "./index.types";
 
-const Button = ({
-  type = "button",
-  onClick,
-  disabled = false,
+import {
+  RecordColors,
+  RecordHeightSizes,
+  RecordWidthSizes,
+  RecordRounded,
+} from "../Button/index.types";
+
+const ButtonLink = ({
   theme = "darkPrimary",
-  size = "medium",
+  height = "medium",
+  width = "medium",
   round = "m",
   alt = "",
   text = "",
   iconLeft,
   iconRight,
   classNames,
-}: InterfaceButtonProps): JSX.Element => {
+  link = "",
+  ...rest
+}: InterfaceButtonLinkProps): JSX.Element => {
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
+    <a
+      href={link}
       className={classnames(
         "rg-btn",
         RecordColors[theme],
-        RecordSizes[size],
+        RecordHeightSizes[height],
+        RecordWidthSizes[width],
         RecordRounded[round],
         classNames
       )}
+      {...rest}
     >
       {iconLeft && <img className="w-3" src={iconLeft} alt={alt} />}
       <span className={`"bg-${theme}"`}>{text}</span>
       {iconRight && <img className="w-3" src={iconRight} alt={alt} />}
-    </button>
+    </a>
   );
 };
 
-export default Button;
+export default ButtonLink;
